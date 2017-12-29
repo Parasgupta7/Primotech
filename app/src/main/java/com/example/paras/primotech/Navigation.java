@@ -80,9 +80,9 @@ public class Navigation extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
-            // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        if (id == R.id.profile) {
+            // Handle the profile
+        } else if (id == R.id.profile) {
 
         } else if (id == R.id.nav_slideshow) {
 
@@ -90,7 +90,7 @@ public class Navigation extends AppCompatActivity
 
         } else if (id == R.id.nav_share) {
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.refer) {
 
         }
 
