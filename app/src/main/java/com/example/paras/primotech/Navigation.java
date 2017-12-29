@@ -128,26 +128,11 @@ public class Navigation extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-<<<<<<< Updated upstream
-        if (id == R.id.profile) {
-            // Handle the profile
-        } else if (id == R.id.profile) {
-=======
->>>>>>> Stashed changes
 
         displayselected(id);
 
 
 
-<<<<<<< Updated upstream
-        } else if (id == R.id.refer) {
-
-        }
-
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.closeDrawer(GravityCompat.START);
-=======
->>>>>>> Stashed changes
         return true;
     }
 }
