@@ -97,7 +97,7 @@ public class Navigation extends AppCompatActivity
         Fragment fragment = null;
 
         switch (id){
-            case R.id.nav_camera:
+            case R.id.profile:
                 fragment = new profile();
 
 
@@ -107,7 +107,7 @@ public class Navigation extends AppCompatActivity
                 ft.replace(R.id.fm,fragment);
                 ft.commit();
                 break;
-            case R.id.nav_gallery:
+            case R.id.aboutus:
                 fragment = new profile1();
 
 
