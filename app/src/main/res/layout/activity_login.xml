@@ -6,6 +6,7 @@
     android:layout_height="match_parent"
     tools:context="com.example.paras.primotech.Login">
 
+    
     <Button
         android:id="@+id/buttonlgn"
         android:layout_width="277dp"
@@ -51,4 +52,13 @@
         android:text="Not a Member ? Sign Up Now"
         tools:layout_editor_absoluteX="102dp"
         tools:layout_editor_absoluteY="419dp" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="90dp"
+        android:layout_height="100dp"
+        android:background="@drawable/img"
+        app:srcCompat="@drawable/logo1"
+        tools:layout_editor_absoluteX="155dp"
+        tools:layout_editor_absoluteY="73dp" />
 </android.support.constraint.ConstraintLayout>
