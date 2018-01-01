@@ -3,8 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Primotech.iml" filepath="$PROJECT_DIR$/Primotech.iml" />
-      <module fileurl="file://C:\Users\anmol\StudioProjects\Primotech\Primotech.iml" filepath="C:\Users\anmol\StudioProjects\Primotech\Primotech.iml" />
-      <module fileurl="file://C:\Users\Paras\Desktop\Android\Primotech\.idea\Primotech.iml" filepath="C:\Users\Paras\Desktop\Android\Primotech\.idea\Primotech.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
