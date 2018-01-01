@@ -1,19 +1,16 @@
 package com.example.paras.primotech;
 
-<<<<<<< HEAD
-=======
-/**
- * Created by Paras on 12/30/2017.
- */
 
->>>>>>> origin/master
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
+import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -21,7 +18,7 @@ import java.util.Map;
 
 import javax.net.ssl.HttpsURLConnection;
 
-<<<<<<< HEAD
+
 /**
  * Created by anmol on 1/1/2018.
  */
@@ -29,9 +26,6 @@ import javax.net.ssl.HttpsURLConnection;
 class RequestHandler {
 
 
-    //this method will send a post request to the specified url
-    //in this app we are using only post request
-    //in the hashmap we have the data to be sent to the server in keyvalue pairs
     public String sendPostRequest(String requestURL, HashMap<String, String> postDataParams) {
         URL url;
 
@@ -39,59 +33,21 @@ class RequestHandler {
         try {
             url = new URL(requestURL);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-=======
-public class RequestHandler {
-
-    //Method to send httpPostRequest
-    //This method is taking two arguments
-    //First argument is the URL of the script to which we will send the request
-    //Other is an HashMap with name value pairs containing the data to be send with the request
-    public String sendPostRequest(String requestURL,
-                                  HashMap<String, String> postDataParams) {
-        //Creating a URL
-        URL url;
-
-        //StringBuilder object to store the message retrieved from the server
-        StringBuilder sb = new StringBuilder();
-        try {
-            //Initializing Url
-            url = new URL(requestURL);
-
-            //Creating an httmlurl connection
-            HttpURLConnection conn = (HttpURLConnection) url.openConnection();
-
-            //Configuring connection properties
->>>>>>> origin/master
             conn.setReadTimeout(15000);
             conn.setConnectTimeout(15000);
             conn.setRequestMethod("POST");
             conn.setDoInput(true);
             conn.setDoOutput(true);
 
-<<<<<<< HEAD
             OutputStream os = conn.getOutputStream();
 
             BufferedWriter writer = new BufferedWriter(
                     new OutputStreamWriter(os, "UTF-8"));
-=======
-            //Creating an output stream
-            OutputStream os = conn.getOutputStream();
-
-            //Writing parameters to the request
-            //We are using a method getPostDataString which is defined below
-            BufferedWriter writer = new BufferedWriter(
-                    new OutputStreamWriter(os, "UTF-8"));
-
->>>>>>> origin/master
             writer.write(getPostDataString(postDataParams));
 
             writer.flush();
             writer.close();
             os.close();
-<<<<<<< HEAD
-=======
-
->>>>>>> origin/master
             int responseCode = conn.getResponseCode();
 
             if (responseCode == HttpsURLConnection.HTTP_OK) {
@@ -99,13 +55,8 @@ public class RequestHandler {
                 BufferedReader br = new BufferedReader(new InputStreamReader(conn.getInputStream()));
                 sb = new StringBuilder();
                 String response;
-<<<<<<< HEAD
 
                 while ((response = br.readLine()) != null) {
-=======
-                //Reading server response
-                while ((response = br.readLine()) != null){
->>>>>>> origin/master
                     sb.append(response);
                 }
             }
@@ -116,43 +67,8 @@ public class RequestHandler {
         return sb.toString();
     }
 
-<<<<<<< HEAD
 
     //this method is converting keyvalue pairs data into a query string as needed to send to the server
-=======
-    public String sendGetRequest(String requestURL){
-        StringBuilder sb =new StringBuilder();
-        try {
-            URL url = new URL(requestURL);
-            HttpURLConnection con = (HttpURLConnection) url.openConnection();
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
-
-            String s;
-            while((s=bufferedReader.readLine())!=null){
-                sb.append(s+"\n");
-            }
-        }catch(Exception e){
-        }
-        return sb.toString();
-    }
-
-    public String sendGetRequestParam(String requestURL, String id){
-        StringBuilder sb =new StringBuilder();
-        try {
-            URL url = new URL(requestURL+id);
-            HttpURLConnection con = (HttpURLConnection) url.openConnection();
-            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(con.getInputStream()));
-
-            String s;
-            while((s=bufferedReader.readLine())!=null){
-                sb.append(s+"\n");
-            }
-        }catch(Exception e){
-        }
-        return sb.toString();
-    }
-
->>>>>>> origin/master
     private String getPostDataString(HashMap<String, String> params) throws UnsupportedEncodingException {
         StringBuilder result = new StringBuilder();
         boolean first = true;
@@ -169,8 +85,4 @@ public class RequestHandler {
 
         return result.toString();
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> origin/master
 }
