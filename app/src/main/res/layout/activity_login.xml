@@ -1,39 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.example.paras.primotech.Login">
 
-    
-    <Button
-        android:id="@+id/buttonlgn"
-        android:layout_width="277dp"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Login"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="338dp" />
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:padding="10dp">
 
-    <EditText
-        android:id="@+id/editTextun"
+
+        <EditText
+            android:id="@+id/editTextUsername"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:hint="Username"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:fontFamily="sans-serif"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <Button
+            android:id="@+id/buttonLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Login" />
+
+        <TextView
+            android:id="@+id/textViewRegister"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Dont' have an account?\nRegister Here"
+            android:textAlignment="center"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:visibility="gone"
+        android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="UserName"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="172dp" />
-
-    <EditText
-        android:id="@+id/editTextpw"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Password"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="252dp" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" />
 
 
 
@@ -45,20 +71,5 @@
         tools:layout_editor_absoluteX="337dp"
         tools:layout_editor_absoluteY="2dp" />
 
-    <TextView
-        android:id="@+id/textregister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Not a Member ? Sign Up Now"
-        tools:layout_editor_absoluteX="102dp"
-        tools:layout_editor_absoluteY="419dp" />
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="90dp"
-        android:layout_height="100dp"
-        android:background="@drawable/img"
-        app:srcCompat="@drawable/logo1"
-        tools:layout_editor_absoluteX="155dp"
-        tools:layout_editor_absoluteY="73dp" />
-</android.support.constraint.ConstraintLayout>
+</RelativeLayout>
