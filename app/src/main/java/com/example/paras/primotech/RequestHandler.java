@@ -3,14 +3,11 @@ package com.example.paras.primotech;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
 import java.io.UnsupportedEncodingException;
 import java.net.HttpURLConnection;
-import java.net.MalformedURLException;
-import java.net.ProtocolException;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.util.HashMap;
@@ -19,9 +16,7 @@ import java.util.Map;
 import javax.net.ssl.HttpsURLConnection;
 
 
-/**
- * Created by anmol on 1/1/2018.
- */
+
 
 class RequestHandler {
 
@@ -68,7 +63,7 @@ class RequestHandler {
     }
 
 
-    //this method is converting keyvalue pairs data into a query string as needed to send to the server
+    //this method is converting key value pairs data into a query string as needed to send to the server
     private String getPostDataString(HashMap<String, String> params) throws UnsupportedEncodingException {
         StringBuilder result = new StringBuilder();
         boolean first = true;
@@ -78,7 +73,7 @@ class RequestHandler {
             else
                 result.append("&");
 
-            result.append(URLEncoder.encode(entry.getKey(), "UTF-8"));
+            result.append(URLEncoder.encode(entry.getKey(),"UTF-8"));
             result.append("=");
             result.append(URLEncoder.encode(entry.getValue(), "UTF-8"));
         }

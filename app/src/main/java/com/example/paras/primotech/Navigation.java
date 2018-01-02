@@ -98,6 +98,9 @@ public class Navigation extends AppCompatActivity
 
         switch (id){
             case R.id.profile:
+
+               /* Intent i = new Intent(getApplicationContext(),ProfileUser.class);
+                startActivity(i);*/
                 fragment = new profile();
 
 

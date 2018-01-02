@@ -25,7 +25,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.activity_login);
         if (SharedPrefManager.getInstance(this).isLoggedIn()) {
             finish();
-            startActivity(new Intent(this, ProfileUser.class));
+            startActivity(new Intent(this, Navigation.class));
             return;
         }
 
@@ -114,7 +114,7 @@ public class Login extends AppCompatActivity {
 
                         //starting the profile activity
                         finish();
-                        startActivity(new Intent(getApplicationContext(), ProfileUser.class));
+                        startActivity(new Intent(getApplicationContext(), Navigation.class));
                     } else {
                         Toast.makeText(getApplicationContext(), "Invalid username or password", Toast.LENGTH_SHORT).show();
                     }
