@@ -21,9 +21,35 @@ class SharedPrefManager {
     private static SharedPrefManager mInstance;
     private static Context mCtx;
 
-    private SharedPrefManager(Context context) {
+
+    SharedPreferences pref;
+    SharedPreferences.Editor editor;
+    Context _context;
+
+    // shared pref mode
+    int PRIVATE_MODE = 0;
+
+
+
+    private static final String IS_FIRST_TIME_LAUNCH = "IsFirstTimeLaunch";
+
+    public SharedPrefManager(Context context) {
         mCtx = context;
+        this._context = context;
+        pref = _context.getSharedPreferences(SHARED_PREF_NAME, PRIVATE_MODE);
+        editor = pref.edit();
     }
+
+    public void setFirstTimeLaunch(boolean isFirstTime) {
+        editor.putBoolean(IS_FIRST_TIME_LAUNCH, isFirstTime);
+        editor.commit();
+    }
+
+    public boolean isFirstTimeLaunch() {
+        return pref.getBoolean(IS_FIRST_TIME_LAUNCH, true);
+    }
+
+    
 
     public static synchronized SharedPrefManager getInstance(Context context) {
         if (mInstance == null) {

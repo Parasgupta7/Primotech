@@ -30,7 +30,7 @@ protected void onCreate(Bundle savedInstanceState) {
         //if the user is already logged in we will directly start the profile activity
         if (SharedPrefManager.getInstance(this).isLoggedIn()) {
         finish();
-        startActivity(new Intent(this, ProfileUser.class));
+        startActivity(new Intent(this,Navigation.class));
         return;
         }
 
@@ -154,7 +154,7 @@ class RegisterUser extends AsyncTask<Void, Void, String> {
 
                 //starting the profile activity
                 finish();
-                startActivity(new Intent(getApplicationContext(), ProfileUser.class));
+                startActivity(new Intent(getApplicationContext(), Navigation.class));
             } else {
                 Toast.makeText(getApplicationContext(), "Some error occurred", Toast.LENGTH_SHORT).show();
             }
