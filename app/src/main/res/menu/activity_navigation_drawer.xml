@@ -3,15 +3,38 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:showIn="navigation_view">
 
-    <group android:checkableBehavior="single">
+    <group android:checkableBehavior="single"
+        android:id="@+id/g1">
         <item
             android:id="@+id/home"
             android:icon="@drawable/home"
             android:title="Home" />
         <item
+            android:id="@+id/trainingsjobs"
+            android:icon="@drawable/ic_assignment_ind_black_24dp"
+            android:title="Trainings &amp; Jobs" />
+        <item
+            android:id="@+id/products"
+            android:icon="@drawable/ic_assignment_ind_black_24dp"
+            android:title="Products" />
+
+
+        <item
             android:id="@+id/profile"
             android:icon="@drawable/ic_assignment_ind_black_24dp"
             android:title="Profile" />
+
+    </group>
+
+
+
+    <group android:checkableBehavior="single"
+        android:id="@+id/g2">
+        <item
+            android:id="@+id/refer"
+            android:icon="@drawable/refer"
+            android:title="Refer and Earn" />
+
         <item
             android:id="@+id/aboutus"
             android:icon="@drawable/about"
@@ -20,32 +43,21 @@
             android:id="@+id/settings"
             android:icon="@drawable/ic_menu_manage"
             android:title="Settings" />
-    </group>
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/rate"
-                android:icon="@drawable/ic_stars_black_24dp"
-                android:title="Review / Rate Us" />
-            <item
-                android:id="@+id/help"
-                android:icon="@drawable/ic_help_black_24dp"
-                android:title="Help?" />
-            <item
-                android:id="@+id/faq"
-                android:icon="@drawable/ic_feedback_black_24dp"
-                android:title="FAQ" />
             <item
                 android:id="@+id/share"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Share" />
-            <item
-                android:id="@+id/refer"
-                android:icon="@drawable/refer"
-                android:title="Refer and Earn" />
+        <item
+            android:id="@+id/rar"
+            android:icon="@drawable/ic_stars_black_24dp"
+            android:title="Rate/Review" />
 
-        </menu>
-    </item>
+
+
+
+
+</group>
+
 
 </menu>
