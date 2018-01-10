@@ -16,6 +16,7 @@ class SharedPrefManager {
     private static final String KEY_USERNAME = "keyusername";
     private static final String KEY_EMAIL = "keyemail";
 
+
     private static final String KEY_ID = "keyid";
 
     private static SharedPrefManager mInstance;

@@ -23,6 +23,7 @@ public class profile extends Fragment {
         textViewGender = (TextView)getView(). findViewById(R.id.textViewGender);
 
 
+
        // User user = SharedPrefManager.getInstance(this.getActivity()).getUser();
 
         //setting the values to the textviews

@@ -29,7 +29,6 @@ public class Login extends AppCompatActivity {
             startActivity(new Intent(this, Navigation.class));
             return;
         }
-
         editTextUsername = findViewById(R.id.editTextUsername);
         editTextPassword = findViewById(R.id.editTextPassword);
         btn = findViewById(R.id.buttonLogin);

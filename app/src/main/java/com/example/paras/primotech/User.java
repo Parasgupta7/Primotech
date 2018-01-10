@@ -19,7 +19,6 @@ public class User {
         this.phone=phone;
     }
 
-
     public User(){
 
     }
