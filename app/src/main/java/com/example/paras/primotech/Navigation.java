@@ -89,10 +89,9 @@ public class Navigation extends AppCompatActivity
         Fragment fragment = null;
 
         switch (id){
-            case R.id.profile:
+            case R.id.settings:
 
-               /* Intent i = new Intent(getApplicationContext(),ProfileUser.class);
-                startActivity(i);*/
+
                 fragment = new profile();
 
 
