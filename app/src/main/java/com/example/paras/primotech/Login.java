@@ -21,6 +21,7 @@ public class Login extends AppCompatActivity {
     EditText editTextUsername, editTextPassword;
     Button btn;
     TextView t;
+    private Button btnSkip;
 
 
     @Override
@@ -35,6 +36,7 @@ public class Login extends AppCompatActivity {
         editTextUsername = findViewById(R.id.editTextUsername);
         editTextPassword = findViewById(R.id.editTextPassword);
         btn = findViewById(R.id.buttonLogin);
+        btnSkip = (Button) findViewById(R.id.btn_skip);
         t = findViewById(R.id.textViewRegister);
         t.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,6 +46,13 @@ public class Login extends AppCompatActivity {
             }
         });
 
+        btnSkip.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(Login.this,Navigation.class);
+                startActivity(i);
+            }
+        });
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
