@@ -1,10 +1,8 @@
 package com.example.paras.primotech;
 
-import android.content.Context;
-import android.content.Intent;
-import android.net.Uri;
-import android.os.Bundle;
 import android.app.Fragment;
+import android.content.Intent;
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -25,13 +23,13 @@ public class profile extends Fragment {
         textViewGender = (TextView)getView(). findViewById(R.id.textViewGender);
 
 
-        User user = SharedPrefManager.getInstance(this.getActivity()).getUser();
+       // User user = SharedPrefManager.getInstance(this.getActivity()).getUser();
 
         //setting the values to the textviews
-        textViewId.setText(String.valueOf(user.getId()));
-        textViewUsername.setText(user.getUsername());
-        textViewEmail.setText(user.getEmail());
-        textViewGender.setText(user.getGender());
+      //  textViewId.setText(String.valueOf(user.getId()));
+       // textViewUsername.setText(user.getUsername());
+      //  textViewEmail.setText(user.getEmail());
+       // textViewGender.setText(user.getGender());
         getActivity().setTitle("profile");
 
 
@@ -60,11 +58,6 @@ public class profile extends Fragment {
 
 
 
-        //getting the current user
-
-
-        //when the user presses logout button
-        //calling the logout method
 
 
         return inflater.inflate(R.layout.fragment_profile, container, false);

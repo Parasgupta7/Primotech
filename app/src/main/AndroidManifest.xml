@@ -24,7 +24,6 @@
 
         <activity android:name=".Welcome3" />
         <activity android:name=".Welcome4" />
-        <activity android:name=".Welcome5" />
         <activity android:name=".Welcome0">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

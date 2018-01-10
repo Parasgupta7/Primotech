@@ -1,34 +1,56 @@
 package com.example.paras.primotech;
 
 /**
- * Created by anmol on 1/1/2018.
+ * Created by anmol on 1/5/2018.
  */
 
-class User {
+public class User {
 
-    private String username, email, gender;
-    int id;
 
-    public User(int id, String username, String email, String gender) {
-        this.id = id;
-        this.username = username;
-        this.email = email;
-        this.gender = gender;
+    String uname,pw,email,id,phone;
+
+    public User(String id, String uname, String email, String pw,String phone) {
+
+
+        this.id=id;
+        this.uname=uname;
+        this.email=email;
+        this.pw=pw;
+        this.phone=phone;
     }
 
-    public String getUsername() {
-        return username;
+
+    public User(){
+
+    }
+
+    public User(String uname, String email) {
+
+
+
+        this.uname=uname;
+        this.email=email;
+
+    }
+
+
+    public String getUname() {
+        return uname;
     }
 
     public String getEmail() {
         return email;
     }
-
-    public String getGender() {
-        return gender;
-    }
-
-    public int getId() {
+    public String getId() {
         return id;
     }
+
+    public String getPw() {
+        return pw;
+    }
+    public String getPhone() {
+        return phone;
+    }
+
+
 }

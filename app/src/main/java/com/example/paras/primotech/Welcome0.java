@@ -38,7 +38,7 @@ public class Welcome0 extends AppCompatActivity {
             finish();
         }
 
-        // Making notification bar transparent
+
         if (Build.VERSION.SDK_INT >= 21) {
             getWindow().getDecorView().setSystemUiVisibility(View.SYSTEM_UI_FLAG_LAYOUT_STABLE | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
         }
@@ -51,18 +51,18 @@ public class Welcome0 extends AppCompatActivity {
         btnNext = (Button) findViewById(R.id.btn_next);
 
 
-        // layouts of all welcome sliders
-        // add few more layouts if you want
+
         layouts = new int[]{
                 R.layout.activity_welcome1,
                 R.layout.activity_welcome2,
                 R.layout.activity_welcome3,
-                R.layout.activity_welcome4,R.layout.activity_welcome5};
+                R.layout.activity_welcome4
+        };
 
-        // adding bottom dots
-        addBottomDots(0);
 
-        // making notification bar transparent
+        addBottomDots(2);
+
+
         changeStatusBarColor();
 
         myViewPagerAdapter = new MyViewPagerAdapter();

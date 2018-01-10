@@ -13,11 +13,15 @@
         <item
             android:id="@+id/products"
             android:icon="@drawable/trolley"
-            android:title="Products" />
+            android:title="Energy Solutions" />
         <item
             android:id="@+id/trainingsjobs"
             android:icon="@drawable/working"
             android:title="Jobs &amp; Trainings" />
+        <item
+            android:id="@+id/aboutus"
+            android:icon="@drawable/about"
+            android:title="About Us" />
 
         <item
             android:id="@+id/profile"
@@ -34,24 +38,18 @@
             android:id="@+id/refer"
             android:icon="@drawable/refer"
             android:title="Refer and Earn" />
-
         <item
-            android:id="@+id/aboutus"
-            android:icon="@drawable/about"
-            android:title="About Us" />
-        <item
-            android:id="@+id/settings"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Settings" />
-
-            <item
-                android:id="@+id/share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
+            android:id="@+id/share"
+            android:icon="@drawable/ic_menu_share"
+            android:title="Share" />
         <item
             android:id="@+id/rar"
             android:icon="@drawable/ic_stars_black_24dp"
             android:title="Rate/Review" />
+        <item
+            android:id="@+id/settings"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Settings" />
 
 
 
