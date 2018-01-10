@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.database.DataSnapshot;
@@ -19,6 +20,8 @@ public class Login extends AppCompatActivity {
 
     EditText editTextUsername, editTextPassword;
     Button btn;
+    TextView t;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +35,14 @@ public class Login extends AppCompatActivity {
         editTextUsername = findViewById(R.id.editTextUsername);
         editTextPassword = findViewById(R.id.editTextPassword);
         btn = findViewById(R.id.buttonLogin);
+        t = findViewById(R.id.textViewRegister);
+        t.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(Login.this,Register.class);
+                startActivity(i);
+            }
+        });
 
 
         btn.setOnClickListener(new View.OnClickListener() {
