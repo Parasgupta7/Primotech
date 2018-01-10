@@ -7,12 +7,13 @@ package com.example.paras.primotech;
 public class User {
 
 
-    String uname,pw,email,id,phone;
+    String uname,pw,email,id,phone,name;
 
-    public User(String id, String uname, String email, String pw,String phone) {
+    public User(String id,String name, String uname, String email, String pw,String phone) {
 
 
         this.id=id;
+        this.name=name;
         this.uname=uname;
         this.email=email;
         this.pw=pw;

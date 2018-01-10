@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class Register extends AppCompatActivity {
 
     private static final String TAG = Register.class.getSimpleName();
-    EditText editTextUsername, editTextEmail, editTextPassword,editTextphone;
+    EditText editTextUsername, editTextEmail, editTextPassword,editTextphone,editTextname;
     TextView tv;
     Button btnregister;
 
@@ -40,6 +40,7 @@ public class Register extends AppCompatActivity {
         editTextEmail = findViewById(R.id.editTextEmail);
         editTextPassword = findViewById(R.id.editTextPassword);
         editTextphone=findViewById(R.id.editTextPhone);
+        editTextname=findViewById(R.id.editTextName);
         btnregister = findViewById(R.id.buttonRegister);
         tv= findViewById(R.id.textViewLogin);
 
@@ -51,20 +52,24 @@ public class Register extends AppCompatActivity {
         btnregister.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                String name = editTextname.getText().toString().trim();
                 String uname = editTextUsername.getText().toString().trim();
                 String email = editTextEmail.getText().toString().trim();
                 String pw = editTextPassword.getText().toString().trim();
                 String phone = editTextphone.getText().toString().trim();
                 if (!TextUtils.isEmpty(uname)) {
                     String id = mFirebaseDatabase.push().getKey();
-                    User user = new User(id,uname,email,pw,phone);
+                    User user = new User(id,name,uname,email,pw,phone);
 
 
                     mFirebaseDatabase.child(id).setValue(user);
 
+                    Toast.makeText(getApplicationContext(), "Registered Succesfully", Toast.LENGTH_LONG).show();
+                    Intent i = new Intent(Register.this,Login.class);
+                    startActivity(i);
                     SharedPrefManager.getInstance(getApplicationContext()).userLogin(user);
 
-                    Toast.makeText(getApplicationContext(), "Registered Succesfully", Toast.LENGTH_LONG).show();
+
                 } else {
 
                     Toast.makeText(getApplicationContext(), "Please enter a Username", Toast.LENGTH_LONG).show();
