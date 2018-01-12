@@ -27,7 +27,6 @@ class SharedPrefManager {
     SharedPreferences.Editor editor;
     Context _context;
 
-    // shared pref mode
     int PRIVATE_MODE = 0;
 
 
@@ -59,8 +58,6 @@ class SharedPrefManager {
         return mInstance;
     }
 
-    //method to let the user login
-    //this method will store the user data in shared preferences
     public void userLogin(User user) {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
@@ -69,7 +66,6 @@ class SharedPrefManager {
         editor.apply();
     }
 
-    //this method will checker whether user is already logged in or not
     public boolean isLoggedIn() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         return sharedPreferences.getString(KEY_USERNAME, null) != null;
@@ -86,7 +82,6 @@ class SharedPrefManager {
         );
     }
 
-    //this method will logout the user
     public void logout() {
         SharedPreferences sharedPreferences = mCtx.getSharedPreferences(SHARED_PREF_NAME, Context.MODE_PRIVATE);
         SharedPreferences.Editor editor = sharedPreferences.edit();
