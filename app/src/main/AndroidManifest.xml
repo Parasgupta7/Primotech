@@ -19,11 +19,7 @@
         </activity>
         <activity android:name=".Login" />
         <activity android:name=".Register" />
-        <activity android:name=".Welcome1" />
-        <activity android:name=".Welcome2" />
 
-        <activity android:name=".Welcome3" />
-        <activity android:name=".Welcome4" />
         <activity android:name=".Welcome0">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

@@ -111,9 +111,21 @@ public class Navigation extends AppCompatActivity
                 ft1.replace(R.id.fm,fragment);
                 ft1.commit();
                 break;
+            case R.id.products:
+
+
+                fragment = new products();
+
+
+                FragmentManager fm2 = getFragmentManager();
+                FragmentTransaction ft2 = fm2.beginTransaction();
+
+                ft2.replace(R.id.fm,fragment);
+                ft2.commit();
+                break;
 
         }
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        DrawerLayout drawer = findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
     }
     @SuppressWarnings("StatementWithEmptyBody")

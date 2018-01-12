@@ -48,19 +48,10 @@ public class profile extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
 
-
-
         if (!SharedPrefManager.getInstance(this.getActivity()).isLoggedIn()) {
             getActivity().finish();
             startActivity(new Intent(this.getActivity(), Login.class));
         }
-
-
-
-
-
-
-
         return inflater.inflate(R.layout.fragment_profile, container, false);
     }
 
